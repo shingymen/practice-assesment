@@ -1,9 +1,6 @@
 // adding react
-import React, { useState } from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import Doctors from "./Doctors";
-import SignUp from "./SignUp";
-import Database from "./Database";
+import React from "react";
+
 import OpenClose from "./OpenClose";
 
 function Home() {

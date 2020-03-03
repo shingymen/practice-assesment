@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import OpenClose from "./OpenClose";
 
 // import Doctor from './Doctor'
 export default function DutyPage() {
@@ -48,8 +49,10 @@ export default function DutyPage() {
     <div>
       <h2>Doctor on-site:</h2>
       {schedule}
-      <p>Call us at: 020 - 555 5555</p>
-      <p>Our opening hours are from: 8.00hr till 17.00hr</p>
+      <OpenClose />
+
+      {/*<p>Call us at: 020 - 555 5555</p>
+      <p>Our opening hours are from: 8.00hr till 17.00hr</p>*/}
     </div>
   );
 }
