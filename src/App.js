@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import Database from "./components/Database";
-import Doctors from "./components/Doctors";
+import DutyPage from "./components/Doctors";
 import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -20,8 +20,9 @@ function App() {
         <Link to="/database">Patient Database</Link>
       </nav>
       <Switch>
+        <Route path="/" exact={true} component={Home} />}
         <Route path="/home" exact={true} component={Home} />}
-        <Route path="/doctors" exact={true} component={Doctors} />
+        <Route path="/doctors" exact={true} component={DutyPage} />
         <Route path="/signup" exact={true} component={SignUp} />}
         <Route path="/database" exact={true} component={Database} />
       </Switch>

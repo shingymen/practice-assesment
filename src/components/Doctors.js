@@ -5,20 +5,13 @@ import OpenClose from "./OpenClose";
 // import Doctor from './Doctor'
 export default function DutyPage() {
   const [doctors, setDoctors] = useState([]);
-  //!!!(dont activate)==> const [selectedDocterId, setSelectedDocterId] = useState();
-  // const url =
-  // "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors";
-  // const fetchData = async () => {
-  // const response = await axios.get(url);
-  //console.log(response.data);
-  //setDoctors(response.data);
 
   async function getDoctors() {
     const response = await axios.get(
       "https://my-json-server.typicode.com/Codaisseur/patient-doctor-data/doctors"
     );
 
-    console.log("response test:", response.data);
+    console.log("response test2:", response.data);
 
     setDoctors(response.data);
   }

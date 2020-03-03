@@ -8,9 +8,7 @@ function Home() {
     <div>
       {/*Content below here*/}
       <h1>Welcome to AMS Gps </h1>
-      <p>
-        <OpenClose />
-      </p>
+      <OpenClose />
 
       <a href="/doctors">
         <button>Who is on duty?</button>
