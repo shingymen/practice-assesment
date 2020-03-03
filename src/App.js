@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./components/Home";
+import SignUp from "./components/SignUp";
+import Database from "./components/Database";
+import Doctors from "./components/Doctors";
+import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <nav>
+        <Link to="/home">HOME</Link>
+        <Link to="/doctors">Doctor Schedule</Link>
+        <Link to="/signup">Patient Signup</Link>
+        <Link to="/database">Patient Database</Link>
+      </nav>
+      <Switch>
+        <Route path="/home" exact={true} component={Home} />}
+        <Route path="/doctors" exact={true} component={Doctors} />
+        <Route path="/signup" exact={true} component={SignUp} />}
+        <Route path="/database" exact={true} component={Database} />
+      </Switch>
     </div>
   );
 }
